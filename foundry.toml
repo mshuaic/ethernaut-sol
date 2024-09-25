@@ -16,6 +16,14 @@ forge-std = { version = "1.9.2", url = "https://soldeer-revisions.s3.amazonaws.c
 "@openzeppelin-contracts" = "4.9.6"
 ethernaut = { version = "v1", git = "https://github.com/OpenZeppelin/ethernaut.git", rev = "06dc0b48d9113b06f1e114baf2d1c40ecb432d41" }
 
+[fmt]
+wrap_comments=true
+line_length=80
+multiline_func_header="all"
+
+[soldeer]
+remappings_generate = true
+remappings_regenerate = false
 
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

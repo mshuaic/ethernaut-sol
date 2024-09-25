@@ -1,23 +1,9 @@
 [[dependencies]]
 name = "@openzeppelin-contracts"
-version = "3.4.2"
-source = "https://soldeer-revisions.s3.amazonaws.com/@openzeppelin-contracts/3_4_2_22-01-2024_13:13:07_contracts.zip"
-checksum = "c3e91cd93e0a426a5d4e37095d6e7f73791b0fcf28074194bd00f3eb879ff4ca"
-integrity = "1aa108bd1b99f27e371035c5fc1f6d9c1b0b74e9f2c54a4d7a16c613966dc72b"
-
-[[dependencies]]
-name = "@openzeppelin-contracts"
 version = "4.9.6"
 source = "https://soldeer-revisions.s3.amazonaws.com/@openzeppelin-contracts/4_9_6_14-03-2024_06:11:55_contracts.zip"
 checksum = "57f2cae4b45b91b0847e58c36ea70aee0fb3212cc09b47279627f0764f87e5ee"
 integrity = "861134d6a3739362ce5ef6541538e23ca1df10ec47151f105057bea0bb710330"
-
-[[dependencies]]
-name = "@openzeppelin-contracts"
-version = "5.0.2"
-source = "https://soldeer-revisions.s3.amazonaws.com/@openzeppelin-contracts/5_0_2_14-03-2024_06:11:59_contracts.zip"
-checksum = "8bc4f0acc7c187771b878d46f7de4bfad1acad2eb5d096d9d05d34035853f5c3"
-integrity = "55881f6114aa36158566ef52b486d9d96b217c3e47d0e24bbd4994a8cfb5ee7c"
 
 [[dependencies]]
 name = "ethernaut"
