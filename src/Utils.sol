@@ -15,7 +15,13 @@ abstract contract Utils is Script {
         return bytesToUint(ret);
     }
 
-    function waitNumBlocks(uint256 numberBlocks, uint256 sleepTime) public returns (uint256) {
+    function waitNumBlocks(
+        uint256 numberBlocks,
+        uint256 sleepTime
+    )
+        public
+        returns (uint256)
+    {
         uint256 startNumber = getBlockNumRPC();
         while (true) {
             uint256 currNumber = getBlockNumRPC();
@@ -29,5 +35,23 @@ abstract contract Utils is Script {
             vm.sleep(sleepTime);
         }
         return 0;
+    }
+
+    function checkIfEventExists(
+        Vm.Log[] memory entries,
+        bytes memory eventSignature
+    )
+        public
+        pure
+        returns (bool, uint256)
+    {
+        for (uint256 i = 0; i < entries.length; i++) {
+            if (entries[i].topics.length == 4) {
+                if (entries[i].topics[0] == keccak256(eventSignature)) {
+                    return (true, i);
+                }
+            }
+        }
+        return (false, type(uint256).max);
     }
 }

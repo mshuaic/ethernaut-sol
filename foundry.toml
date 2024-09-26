@@ -2,6 +2,7 @@
 src = "src"
 out = "out"
 libs = ["dependencies"]
+allow_paths = ["lib"]
 
 
 [etherscan]
@@ -15,6 +16,7 @@ sepolia = "${SEPOLIA_RPC_URL}"
 forge-std = { version = "1.9.2", url = "https://soldeer-revisions.s3.amazonaws.com/forge-std/1_9_2_06-08-2024_17:31:25_forge-std-1.9.2.zip" }
 "@openzeppelin-contracts" = "4.9.6"
 ethernaut = { version = "v1", git = "https://github.com/OpenZeppelin/ethernaut.git", rev = "06dc0b48d9113b06f1e114baf2d1c40ecb432d41" }
+"@openzeppelin-contracts-3.4.2" = "3.4.2"
 
 [fmt]
 wrap_comments=true
