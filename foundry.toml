@@ -4,6 +4,7 @@ out = "out"
 libs = ["dependencies"]
 fs_permissions = [{ access = "read", path = "./"}]
 ffi = true
+ignored_warnings_from = ["dependencies"]
 
 
 
