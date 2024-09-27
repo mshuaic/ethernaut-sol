@@ -2,7 +2,9 @@
 src = "src"
 out = "out"
 libs = ["dependencies"]
-allow_paths = ["lib"]
+fs_permissions = [{ access = "read", path = "./"}]
+ffi = true
+
 
 
 [etherscan]
@@ -26,6 +28,7 @@ multiline_func_header="all"
 [soldeer]
 remappings_generate = true
 remappings_regenerate = false
+
 
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

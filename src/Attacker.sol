@@ -7,8 +7,9 @@ import {Vm} from "forge-std/Vm.sol";
 import {Ethernaut} from "ethernaut/Ethernaut.sol";
 import {Level} from "ethernaut/levels/base/Level.sol";
 import {Utils} from "./Utils.sol";
+import {YulDeployer} from "./YulDeployer.sol";
 
-abstract contract Attacker is Script, Utils {
+abstract contract Attacker is Script, Utils, YulDeployer {
     uint256 private deployerPrivateKey = vm.envUint("PRIVATE_KEY");
     Vm.Wallet internal me = vm.createWallet(deployerPrivateKey);
 
