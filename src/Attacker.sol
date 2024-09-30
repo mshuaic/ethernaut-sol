@@ -20,6 +20,10 @@ abstract contract Attacker is Script, Utils, YulDeployer {
 
     address private instance;
 
+    constructor() {
+        vm.label(me.addr, "me");
+    }
+
     // TODO: remove this function
     function getNewLevelInstance(Level _level)
         public
