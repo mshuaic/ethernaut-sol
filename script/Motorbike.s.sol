@@ -49,7 +49,6 @@ contract MotorbikeScript is Attacker {
         // https://github.com/OpenZeppelin/ethernaut/issues/701
         // try again after https://eips.ethereum.org/EIPS/eip-7702
 
-
         require(submitInstance(), "Level submission failed");
         vm.stopBroadcast();
     }

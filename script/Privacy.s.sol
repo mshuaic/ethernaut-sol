@@ -48,7 +48,8 @@ contract PrivacyScript is Attacker {
 
         require(
             storageSlot
-                == bytes32(uint256(flattening)) | (bytes32(uint256(denomination)) << 8)
+                == bytes32(uint256(flattening))
+                    | (bytes32(uint256(denomination)) << 8)
                     | (bytes32(uint256(awkwardness)) << 16),
             "storageSlot not loaded correctly"
         );

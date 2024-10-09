@@ -11,7 +11,11 @@ abstract contract Reentrance {
     mapping(address => uint256) public balances;
 
     function donate(address _to) public payable virtual;
-    function balanceOf(address _who) public view virtual returns (uint256 balance);
+    function balanceOf(address _who)
+        public
+        view
+        virtual
+        returns (uint256 balance);
     function withdraw(uint256 _amount) public virtual;
     receive() external payable {}
 }

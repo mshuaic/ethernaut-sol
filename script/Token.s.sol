@@ -7,8 +7,16 @@ import {Level} from "ethernaut/levels/base/Level.sol";
 import {Vm, console, Attacker} from "../src/Attacker.sol";
 import {Token} from "../src/Token.sol";
 
-// Level address: 0x478f3476358Eb166Cb7adE4666d04fbdDB56C407
-
+/**
+ * Level address: 0x478f3476358Eb166Cb7adE4666d04fbdDB56C407
+ * The goal of this level is for you to hack the basic token contract below.
+ * You are given 20 tokens to start with and you will beat the level if you
+ * somehow manage to get your hands on any additional tokens. Preferably a very
+ * large amount of tokens.
+ *
+ * Things that might help:
+ * What is an odometer?
+ */
 contract Relay {
     Token victim;
 
@@ -34,9 +42,7 @@ contract TokenScript is Attacker {
         relay.attack(me.addr);
 
         require(token.balanceOf(me.addr) > balance);
-
-        require(submitInstance() == true);
-
+        require(submitInstance());
         vm.stopBroadcast();
     }
 }

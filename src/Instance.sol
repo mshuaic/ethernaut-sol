@@ -21,8 +21,12 @@ contract Instance {
     }
 
     function info2(string memory param) public pure returns (string memory) {
-        if (keccak256(abi.encodePacked(param)) == keccak256(abi.encodePacked("hello"))) {
-            return "The property infoNum holds the number of the next info method to call.";
+        if (
+            keccak256(abi.encodePacked(param))
+                == keccak256(abi.encodePacked("hello"))
+        ) {
+            return
+            "The property infoNum holds the number of the next info method to call.";
         }
         return "Wrong parameter.";
     }
@@ -36,7 +40,10 @@ contract Instance {
     }
 
     function authenticate(string memory passkey) public {
-        if (keccak256(abi.encodePacked(passkey)) == keccak256(abi.encodePacked(password))) {
+        if (
+            keccak256(abi.encodePacked(passkey))
+                == keccak256(abi.encodePacked(password))
+        ) {
             cleared = true;
         }
     }
